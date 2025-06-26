@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Young For Chicks</title>
+    <link rel="stylesheet" href="Styles/dashboard.css" />
+    <link rel="stylesheet" href="Styles/modal.css" />
+    <link rel="stylesheet" href="Styles/landing-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="assets/Gemini_Generated_Image_oje925oje925oje9.png"
+            alt="Chick Farm App Logo"
+          />
+          <h1>Admin Panel</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li>
+              <a href="#" id="adminLogoutBtn" class="btn secondary">Logout</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="dashboard-wrapper container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Admin Navigation</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#admin-overview" class="sidebar-active">Overview</a>
+            </li>
+            <li><a href="#manage-requests">Manage Requests</a></li>
+            <li><a href="#manage-payments">Manage Payments</a></li>
+            <li><a href="#manage-products">Manage Products</a></li>
+            <li><a href="#" id="sidebarAdminLogoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="dashboard-content">
+        <section id="admin-overview" class="dashboard-section active">
+          <h2>Welcome, <span id="adminUserName">Admin</span>!</h2>
+          <p>
+            This is your central hub for managing the Young For Chicks platform.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>Total Pending Requests</h3>
+              <p id="totalPendingRequests">0</p>
+            </div>
+            <div class="stat-card">
+              <h3>Total Completed Requests</h3>
+              <p id="totalCompletedRequests">0</p>
+            </div>
+            <div class="stat-card">
+              <h3>Total Farmers</h3>
+              <p id="totalFarmers">0</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="manage-requests" class="dashboard-section">
+          <h2>Manage Farmer Requests</h2>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Request ID</th>
+                  <th>Farmer Name</th>
+                  <th>Chick Type</th>
+                  <th>Quantity</th>
+                  <th>Delivery Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminRequestsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="manage-payments" class="dashboard-section">
+          <h2>Manage Farmer Payments</h2>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Payment ID</th>
+                  <th>Request ID</th>
+                  <th>Farmer Name</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminPaymentsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="manage-products" class="dashboard-section">
+          <h2>Manage Products</h2>
+          <div class="product-management">
+            <h3>Add New Product</h3>
+            <form id="addProductForm">
+              <div class="form-group">
+                <label for="newProductName">Product Name:</label>
+                <input type="text" id="newProductName" required />
+              </div>
+              <div class="form-group">
+                <label for="newProductCategory">Category:</label>
+                <select id="newProductCategory" required>
+                  <option value="">Select Category</option>
+                  <option value="chick-types">Chick Types</option>
+                  <option value="feeds">Feeds</option>
+                  <option value="vaccines">Vaccines & Supplements</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="newProductShortDesc">Short Description:</label>
+                <input type="text" id="newProductShortDesc" required />
+              </div>
+              <div class="form-group">
+                <label for="newProductFullDesc">Full Description:</label>
+                <textarea id="newProductFullDesc" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="newProductPrice">Price:</label>
+                <input type="text" id="newProductPrice" required />
+              </div>
+              <div class="form-group">
+                <label for="newProductImage"
+                  >Image URL (or path in assets/):</label
+                >
+                <input
+                  type="text"
+                  id="newProductImage"
+                  value="assets/placeholder.jpg"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn primary">Add Product</button>
+              <div id="addProductMessage" class="message-area"></div>
+            </form>
+
+            <h3>Existing Products</h3>
+            <div id="existingProductsList"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Young For Chicks Inc. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="Js/main.js" defer></script>
+  </body>
+</html>

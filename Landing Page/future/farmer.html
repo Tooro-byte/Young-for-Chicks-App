@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer Dashboard - Young for Chicks Farm</title>
+    <link rel="stylesheet" href="../Styles/landing-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../assets/logo.png" alt="Young for Chicks Farm Logo" />
+          <h1>Young for Chicks Farm</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="farmer.html" class="active">Dashboard</a></li>
+            <li><a href="#requests">My Requests</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#payments">Payments</a></li>
+            <li>
+              <a href="../login.html" class="btn secondary" id="logoutBtn"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="user-info">
+          <p>Welcome, <span id="farmerUserName">Farmer!</span></p>
+          <small>Logged in as Farmer</small>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="#dashboard" class="sidebar-active">Overview</a></li>
+            <li><a href="#new-request">New Chick Request</a></li>
+            <li><a href="#my-requests">My Current Requests</a></li>
+            <li><a href="#poultry-education">Poultry Education</a></li>
+            <li><a href="#vaccination-literacy">Vaccination Literacy</a></li>
+            <li><a href="#feeding-education">Feeding Education</a></li>
+            <li><a href="#payment-history">Payment History</a></li>
+            <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="dashboard-content">
+        <section id="dashboard" class="dashboard-section active">
+          <h2>Dashboard Overview</h2>
+          <p>Quick glance at your farm's activity.</p>
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <h3>Pending Requests</h3>
+              <p id="pendingRequestsCount">0</p>
+            </div>
+            <div class="stat-card">
+              <h3>Completed Requests</h3>
+              <p id="completedRequestsCount">0</p>
+            </div>
+            <div class="stat-card">
+              <h3>Total Chicks Ordered</h3>
+              <p id="totalChicksOrdered">0</p>
+            </div>
+          </div>
+          <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <a href="#new-request" class="btn primary">Submit New Request</a>
+            <a href="#poultry-education" class="btn secondary"
+              >Access Education</a
+            >
+          </div>
+        </section>
+
+        <section id="new-request" class="dashboard-section">
+          <h2>Submit New Chick Request</h2>
+          <div class="form-card">
+            <form id="chickRequestForm">
+              <div class="form-group">
+                <label for="chickType">Chick Type</label>
+                <select id="chickType" name="chickType" required>
+                  <option value="">Select Chick Type</option>
+                  <option value="Broiler">Broiler</option>
+                  <option value="Layer">Layer</option>
+                  <option value="Kuroiler">Kuroiler</option>
+                  <option value="Local Breed">Local Breed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Quantity (e.g., 50, 100, 200)</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="deliveryDate">Preferred Delivery Date</label>
+                <input
+                  type="date"
+                  id="deliveryDate"
+                  name="deliveryDate"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="comments">Additional Comments (Optional)</label>
+                <textarea id="comments" name="comments" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn primary large">
+                Submit Request
+              </button>
+              <div
+                id="requestMessage"
+                class="message-area"
+                style="display: none"
+              ></div>
+            </form>
+          </div>
+        </section>
+        <!-----------------Current And Past Request Tables----------------------->
+        <section id="my-requests" class="dashboard-section">
+          <h2>My Current and Past Requests</h2>
+          <div class="table-container">
+            <table id="requestsTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <!-- Added Date column -->
+                  <th>Chick Type</th>
+                  <th>Quantity</th>
+                  <th>Status</th>
+                  <!-- Changed from Delivery Date, will show the status here -->
+                  <th>Delivery Date</th>
+                  <!-- Kept original Delivery Date, reordered -->
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="requestsTableBody">
+                <!-- ADD THIS ID HERE -->
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 20px">
+                    Loading requests...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="poultry-education" class="dashboard-section">
+          <h2>Poultry Education Hub</h2>
+          <p>Enhance your farming knowledge with our comprehensive guides.</p>
+          <div class="education-grid">
+            <div class="education-card">
+              <h3>General Poultry Management</h3>
+              <p>Learn about housing, hygiene, and overall flock care.</p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+            <div class="education-card">
+              <h3>Brooding Management</h3>
+              <p>
+                Essential techniques for the critical first weeks of chick life.
+              </p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="vaccination-literacy" class="dashboard-section">
+          <h2>Vaccination Literacy</h2>
+          <p>Understand the importance of vaccinations and schedules.</p>
+          <div class="education-grid">
+            <div class="education-card">
+              <h3>Common Poultry Diseases</h3>
+              <p>
+                Identify, prevent, and manage prevalent diseases in your flock.
+              </p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+            <div class="education-card">
+              <h3>Vaccination Schedules</h3>
+              <p>
+                Recommended vaccination timelines for different chick types.
+              </p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="feeding-education" class="dashboard-section">
+          <h2>Feeding Chick Education</h2>
+          <p>Optimal nutrition for healthy and fast-growing chicks.</p>
+          <div class="education-grid">
+            <div class="education-card">
+              <h3>Starter, Grower, Finisher Feeds</h3>
+              <p>Understanding the different feed types and their uses.</p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+            <div class="education-card">
+              <h3>Feeding Techniques</h3>
+              <p>
+                Tips for efficient feeding to minimize waste and maximize
+                growth.
+              </p>
+              <a href="#" class="btn secondary">Read More</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="payment-history" class="dashboard-section">
+          <h2>My Payment History</h2>
+          <p>Track all your payments for chick orders.</p>
+          <div class="table-container">
+            <table id="paymentsTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <!-- Added Date column for payments -->
+                  <th>Transaction ID</th>
+                  <th>Request ID</th>
+                  <th>Amount Paid</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="paymentsTableBody">
+                <!-- ADD THIS ID HERE -->
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 20px">
+                    Loading payments...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Young for Chicks Farm. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../Js/main.js" defer></script>
+  </body>
+</html>

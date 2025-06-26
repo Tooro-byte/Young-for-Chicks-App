@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Chick App - Login</title>
+    <link rel="stylesheet" href="Styles/landing-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/logo.png" alst="Chick Farm App Logo" />
+          <h1>Young For Chicks</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html" class="active btn primary">Login</a></li>
+            <li><a href="register.html" class="btn secondary">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-form-section">
+        <div class="container">
+          <div class="form-card">
+            <h2>Login to Your Account</h2>
+            <p>Access your farmer or admin dashboard.</p>
+
+            <form id="loginForm" action="#" method="POST">
+              <div class="form-group">
+                <label for="usernameOrEmail">Username or Email</label>
+                <input
+                  type="text"
+                  id="usernameOrEmail"
+                  name="usernameOrEmail"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  autocomplete="current-password"
+                />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn primary large">Login</button>
+              </div>
+
+              <div class="form-links">
+                <p>
+                  Don't have an account?
+                  <a href="register.html">Register as a New Farmer</a>
+                </p>
+                <p><a href="#">Forgot Password?</a></p>
+              </div>
+              <div
+                id="loginMessage"
+                class="message-area"
+                style="display: none"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Main Chick App. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Daily Podcast</a>
+          <a href="#">Subscribe</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Js/main.js"></script>
+  </body>
+</html>

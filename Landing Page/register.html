@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Chick App - Register</title>
+    <link rel="stylesheet" href="Styles/landing-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Chick Farm App Logo" />
+          <h1>Young For Chicks</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html" class="btn primary">Login</a></li>
+            <li>
+              <a href="register.html" class="active btn secondary">Register</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-form-section">
+        <div class="container">
+          <div class="form-card">
+            <h3>CREATE ACCOUNT</h3>
+
+            <p>Join our community to manage your main chick requests.</p>
+
+            <form id="registerForm" action="#" method="POST">
+              <div class="form-group">
+                <label for="farmName">Farm Name</label>
+                <input
+                  type="text"
+                  id="farmName"
+                  name="farmName"
+                  required
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="fullName">Your Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn primary large">
+                  Register
+                </button>
+              </div>
+
+              <div class="form-links">
+                <p>
+                  Already have an account? <a href="login.html">Login Here</a>
+                </p>
+              </div>
+              <div
+                id="registerMessage"
+                class="message-area"
+                style="display: none"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Main Chick App. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Js/main.js" defer></script>
+  </body>
+</html>

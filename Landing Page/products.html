@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products - Chick Farm</title>
+    <link rel="stylesheet" href="Styles/landing-page.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container header-content">
+        <h1 class="logo"><a href="index.html">Chick Farm</a></h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="products-intro">
+        <h2>Our High-Quality Products</h2>
+        <p>
+          Explore the range of healthy chicks, nutritious feeds, and essential
+          vaccines we offer to support your poultry farming success.
+        </p>
+      </section>
+
+      <section class="product-category" id="chick-types">
+        <h3>Chick Types</h3>
+        <div class="product-grid"></div>
+      </section>
+
+      <section class="product-category" id="feeds">
+        <h3>Poultry Feeds</h3>
+        <div class="product-grid"></div>
+      </section>
+
+      <section class="product-category" id="vaccines">
+        <h3>Vaccines & Supplements</h3>
+        <div class="product-grid"></div>
+      </section>
+    </main>
+
+    <div id="productDetailModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modalProductImage" src="" alt="Product Image" />
+        <h3 id="modalProductName"></h3>
+        <p id="modalProductPrice" class="price"></p>
+        <p id="modalProductFullDesc"></p>
+        <button class="btn primary" id="modalRequestButton">
+          Request This Product
+        </button>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section about-us">
+          <h3>Chick Farm</h3>
+          <p>
+            Providing high-quality chicks, feeds, and vaccines to empower
+            farmers across Uganda for sustainable poultry farming.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><img
+                src="https://via.placeholder.com/24x24?text=FB"
+                alt="Facebook"
+            /></a>
+            <a href="#" aria-label="Twitter"
+              ><img
+                src="https://via.placeholder.com/24x24?text=TW"
+                alt="Twitter"
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img
+                src="https://via.placeholder.com/24x24?text=IG"
+                alt="Instagram"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-section useful-links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section our-contacts">
+          <h3>Our Contacts</h3>
+          <p><i class="icon-phone"></i> +256 7X XXXXXXX</p>
+          <p><i class="icon-email"></i> info@chickfarm.ug</p>
+          <p><i class="icon-address"></i> 123 Farm Road, Kampala, Uganda</p>
+        </div>
+
+        <div class="footer-section location">
+          <h3>Location</h3>
+          <p>
+            Visit us at our main office/farm for direct inquiries and purchases.
+          </p>
+          <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+      <div class="container copyright-bar">
+        <p>&copy; 2024 Chick Farm. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="Js/main.js"></script>
+  </body>
+</html>
