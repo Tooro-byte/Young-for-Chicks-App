@@ -16,7 +16,7 @@
   --product-category-heading-color: #00695c; /* Medium green for category headings */
   --product-price-color: #d35400; /* Orange/red for price */
 }
-
+/* General Body Styling*/
 * {
   margin: 0;
   padding: 0;
@@ -41,13 +41,15 @@ body {
 
 /* --- Header --- (Reverted to original selectors) */
 header {
-  background-color: var(--white);
+  height: 100px;
+  background-color: var(--accent-color);
   color: var(--text-color);
   padding: 15px 0;
   border-bottom: 1px solid var(--border-color);
 }
 
 header .container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,19 +57,21 @@ header .container {
 }
 
 .logo {
+  height: 100%;
   display: flex;
   align-items: center;
   /* Removed previous problematic global margin declarations for .logo */
 }
 
 .logo img {
-  height: 79px; /* Adjust as needed */
-  margin-right: 50px;
-  border-radius: 50%;
+  height: 100px; /* Adjust as needed */
+  margin-left: -40px;
+  border-radius: 50px;
 }
 .logo h1 {
   font-size: 1.8em;
   color: var(--primary-color);
+  margin-left: 135px;
 }
 
 header nav ul {
@@ -158,6 +162,7 @@ header nav ul li a.active {
 
 /* --- Main Content --- */
 main {
+  margin-top: 1px;
   flex: 1; /* Allows main content to grow and push footer down */
 }
 
@@ -167,7 +172,7 @@ main {
   color: var(--white);
   text-align: center;
   padding: 80px 0;
-  background-image: url("../assets/background.jpg"); /* Assuming you have a background image */
+  background-image: url("../assets/Gemini_Generated_Image_1rdzmy1rdzmy1rdz.png"); /* Assuming you have a background image */
   background-size: cover;
   background-position: center;
   position: relative; /* For overlay */
