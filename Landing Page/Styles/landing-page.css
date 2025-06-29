@@ -400,9 +400,8 @@ footer {
 }
 /* End of Login Page Stylings*/
 
-/* Farmer Dash Bor Styles Starts right on number 408 */
+/* Farmer Dash Board Styles Starts right on number 404 */
 /* --- Dashboard Layout & Components (for farmer.html --- */
-
 .dashboard-wrapper {
   display: flex;
   /* Adjust height: 100vh - header_height - footer_height */
@@ -472,6 +471,8 @@ footer {
 }
 
 /* Main Dashboard Content Area */
+/* Main Dash Board Styles Starts here Kabisa.*/
+
 .dashboard-content {
   flex-grow: 1; /* Allows content area to take remaining space */
   padding: 30px;
@@ -569,7 +570,7 @@ table thead th {
   color: var(--white);
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid thistle;
   font-weight: bold;
 }
 
@@ -652,12 +653,8 @@ table tbody tr:hover {
   margin-bottom: 20px;
 }
 
-
-
 /* --- Products Pages CSS Styles --- */
 /* The original main.container had no padding, this adds it */
-
-
 
 main.container {
   padding: 40px 20px; /* Add some padding around the main content */
@@ -1064,3 +1061,102 @@ main.container {
     font-size: 1.6em;
   }
 }
+
+/* About Page styles Starts here */
+/* Styles/about-page.css */
+/* Specific styling for the about section */
+
+.about-section {
+  padding: 40px 0;
+  background-color: #ffffff; /* White background for the content area */
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px auto;
+  /* Center the section with some margin */
+  max-width: 960px; /* Max width to control content line length */
+  border-radius: 8px; /* Slightly rounded corners */
+  border: 1px solid purple;
+}
+
+/* Headings */
+.about-section h2 {
+  font-size: 2.5em; /* Larger main heading */
+  color: #0056b3; /* A strong blue color */
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid green; /* Underline effect */
+  padding-bottom: 15px;
+}
+
+.about-section h3 {
+  font-size: 1.8em; /* Sub-headings */
+  color: #007bff; /* A slightly lighter blue */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #007bff; /* Left border for emphasis */
+  padding-left: 10px;
+}
+
+/* Paragraphs */
+.about-section p {
+  font-size: 1.2em; /* Slightly larger paragraph text */
+  margin-bottom: 20px;
+  line-height: 1.8; /* Increased line height for readability */
+  color: black;
+  text-align: justify; /* Justify text for a clean block look */
+}
+
+/* List styling */
+.about-section ul {
+  list-style: disc; /* Bullet points */
+  margin-left: 25px; /* Indent the list */
+  margin-bottom: 20px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+  color: #444;
+}
+
+.about-section ul li strong {
+  color: #0056b3; /* Make strong text stand out */
+}
+
+/* Call-to-action buttons (already styled if you have .btn classes) */
+.about-actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-actions .btn {
+  margin: 0 10px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Allow margin between buttons */
+}
+
+/* Assuming you have .btn primary and .btn secondary classes defined in landing-page.css or another global stylesheet */
+/* Example primary/secondary styles if you don't have them yet: */
+/*
+.btn.primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.btn.secondary:hover {
+    background-color: #5a6268;
+}
+*/
