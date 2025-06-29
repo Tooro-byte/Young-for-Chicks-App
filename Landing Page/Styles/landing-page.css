@@ -239,7 +239,8 @@ main {
 
 .feature-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 3px rgba(160, 190, 189, 0.3);
+  border: 2px solid purple;
 }
 
 .feature-item h4 {
@@ -254,9 +255,10 @@ main {
 
 /* --- Footer --- (Reverted to original structure) */
 footer {
-  background-color: var(--bg-dark);
+  background-color: teal;
   color: var(--white);
   text-align: center;
+  border-radius: 5px;
   padding: 25px 0;
   margin-top: 50px; /* Space above footer */
 }
@@ -272,9 +274,10 @@ footer {
   color: var(--accent-color);
 }
 
-/* --- Login/Registration Page Specific Styles --- */
+/* --- Login Page Specific Styles Starts right here on line number 279--- */
 
 .auth-form-section {
+  background-image: url(../assets/Gemini_Generated_Image_v9nfn6v9nfn6v9nf.png);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,7 +348,6 @@ footer {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Focus highlight */
   outline: none; /* Remove default outline */
 }
-
 .form-actions {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -396,8 +398,10 @@ footer {
   color: #721c24; /* Dark red */
   border: 1px solid #f5c6cb;
 }
+/* End of Login Page Stylings*/
 
-/* --- Dashboard Layout & Components (for future/farmer.html and admin.html) --- */
+/* Farmer Dash Bor Styles Starts right on number 408 */
+/* --- Dashboard Layout & Components (for farmer.html --- */
 
 .dashboard-wrapper {
   display: flex;
@@ -648,8 +652,13 @@ table tbody tr:hover {
   margin-bottom: 20px;
 }
 
+
+
 /* --- Products Pages CSS Styles --- */
 /* The original main.container had no padding, this adds it */
+
+
+
 main.container {
   padding: 40px 20px; /* Add some padding around the main content */
   min-height: 60vh; /* Ensure content takes up minimum height to push footer down */
