@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard - Young For Chicks</title>
-    <link rel="stylesheet" href="Styles/dashboard.css" />
-    <link rel="stylesheet" href="Styles/modal.css" />
+
     <link rel="stylesheet" href="Styles/landing-page.css" />
   </head>
   <body>
+    <!-- The Navigation Bar-->
     <header>
       <div class="container">
         <div class="logo">
@@ -16,7 +16,7 @@
             src="assets/Gemini_Generated_Image_oje925oje925oje9.png"
             alt="Chick Farm App Logo"
           />
-          <h1>Admin Panel</h1>
+          <h1>Young For Chicks</h1>
         </div>
         <nav>
           <ul>
@@ -29,6 +29,7 @@
         </nav>
       </div>
     </header>
+    <!-- End of Header--->
 
     <div class="dashboard-wrapper container">
       <aside class="sidebar">
@@ -121,6 +122,9 @@
                 <label for="newProductName">Product Name:</label>
                 <input type="text" id="newProductName" required />
               </div>
+
+              <!---Farmer Request Form-->
+
               <div class="form-group">
                 <label for="newProductCategory">Category:</label>
                 <select id="newProductCategory" required>
@@ -130,6 +134,8 @@
                   <option value="vaccines">Vaccines & Supplements</option>
                 </select>
               </div>
+
+              <!--Add new products for Customers --->
               <div class="form-group">
                 <label for="newProductShortDesc">Short Description:</label>
                 <input type="text" id="newProductShortDesc" required />
